@@ -1,0 +1,12 @@
+{% extends 'app/Base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1>Delete Post</h1>
+    <form action="{% url 'Wiki_delete' object.pk %}" method="post">
+        {% csrf_token %}
+        <p> Delete Post "{{post.title}}" ?</p>
+        <input type="submit" value="Confirm">
+    </form>
+
+{% endblock content %}

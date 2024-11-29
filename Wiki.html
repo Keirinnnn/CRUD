@@ -1,0 +1,12 @@
+{% extends 'app/Base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="post-entry">
+        <h2><a href="">{{post.title}}</a></h2>
+        <p>{{post.body}}</p>
+        <a href="{% url 'Wiki_update' post.pk %}" class="wikiupd1_btn">+ Edit Post</a>
+        <a href="{% url 'Wiki_delete' post.pk %}" class="wikidel1_btn">- Delete Post</a>
+
+    </div>
+{% endblock content %}
